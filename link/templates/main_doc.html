@@ -1,0 +1,58 @@
+{% extends 'header.html' %}
+
+{% block main_doc %} 
+
+<main>
+  <div class="form_group">
+    <form action="{% url 'LIN:show_video' %}" method="get">
+      <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+          <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light">YouTube Video Downloader</h1>
+            <p class="lead text-body-secondary">Download Youtube video 1080p, 4k, 8k on iPhone Android
+            </p>
+            <div class="input-group mb-3">
+              <input type="text" name="link" placeholder="Paste your video link here" autofocus="autofocus" required="required" id="id_url" class="form-control">
+              <span class="input-group-text" id="basic-addon2">
+                <button type="submit" data-bs-toggle="collapse" data-bs-target="#navbarHeader" class="btn btn-outline-success" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                Download
+                </button>
+              </span>
+            </div>
+            <div>
+              {% block error %} {% endblock %}
+            </div>
+          </div>
+      </form>
+    </div>
+  </section>
+
+
+  <div class="form_group">
+    <div class="album py-lg-5 bg-light">
+      <div class="container">
+        
+        
+        <div class="h-100 text-bg-dark rounded-3" id="navbarHeader">
+          {% block navbarHeader %} {% endblock %}
+
+        </div>
+
+
+      </div>
+    </div>
+  <div class="album py-lg-5 bg-light"></div>
+  
+</div>
+
+</main>
+
+<footer class="text-body-secondary py-5 card-text fs-5 text-body-secondary">
+  <div class="pricing-header p-5 pb-md-5 mx-auto text-center">
+    <p class="mb-1">How to Download YouTube Videos in Multiple Formats</p>
+    <p class="mb-0"> Identify the YouTube video you want to download. Copy the video's URL from the address bar of your web browser. Visit a reliable YouTube video downloader website.<p> There are several options available, such as Y2Mate, SaveFrom.net, or OnlineVideoConverter.</p> Paste the YouTube video URL into the provided field on the downloader website. Select the desired video format and quality. Most downloader websites offer a range of options, including MP4, AVI, WMV, and more. Additionally, they may offer different quality options, such as 720p, 1080p, or higher.<p>Click on the "Download" or "Convert" button to start the process.</p></p>
+  </div>
+</footer>
+
+
+{% endblock %}
